@@ -76,6 +76,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <AdditionalIncludeDirectories>C:\Git\cppcoro\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -90,6 +92,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <AdditionalIncludeDirectories>C:\Git\cppcoro\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -104,6 +108,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <AdditionalIncludeDirectories>C:\Git\cppcoro\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -118,6 +124,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <AdditionalIncludeDirectories>C:\Git\cppcoro\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -138,6 +146,83 @@
     <ClCompile Include="..\Cpp23\math1.ixx" />
     <ClCompile Include="..\Cpp23\math2.ixx" />
     <ClCompile Include="C++23.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\async_auto_reset_event.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\async_generator.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\async_latch.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\async_manual_reset_event.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\async_mutex.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\async_scope.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\awaitable_traits.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\broken_promise.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\cancellation_registration.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\cancellation_source.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\cancellation_token.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\config.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\detail\any.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\detail\get_awaiter.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\detail\is_awaiter.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\detail\lightweight_manual_reset_event.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\detail\manual_lifetime.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\detail\remove_rvalue_reference.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\detail\sync_wait_task.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\detail\unwrap_reference.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\detail\void_value.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\detail\when_all_counter.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\detail\when_all_ready_awaitable.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\detail\when_all_task.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\detail\win32.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\detail\win32_overlapped_operation.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\file.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\file_buffering_mode.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\file_open_mode.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\file_read_operation.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\file_share_mode.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\file_write_operation.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\fmap.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\generator.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\inline_scheduler.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\io_service.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\is_awaitable.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\multi_producer_sequencer.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\net\ipv4_address.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\net\ipv4_endpoint.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\net\ipv6_address.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\net\ipv6_endpoint.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\net\ip_address.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\net\ip_endpoint.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\net\socket.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\net\socket_accept_operation.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\net\socket_connect_operation.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\net\socket_disconnect_operation.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\net\socket_recv_from_operation.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\net\socket_recv_operation.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\net\socket_send_operation.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\net\socket_send_to_operation.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\on_scope_exit.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\operation_cancelled.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\readable_file.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\read_only_file.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\read_write_file.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\recursive_generator.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\resume_on.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\round_robin_scheduler.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\schedule_on.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\sequence_barrier.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\sequence_range.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\sequence_traits.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\shared_task.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\single_consumer_async_auto_reset_event.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\single_consumer_event.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\single_producer_sequencer.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\static_thread_pool.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\sync_wait.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\task.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\when_all.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\when_all_ready.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\writable_file.hpp" />
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\write_only_file.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

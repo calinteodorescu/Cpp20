@@ -13,6 +13,15 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\cppcoro">
+      <UniqueIdentifier>{70a757ee-8a15-4d64-872c-2293ffe6d98f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\cppcoro\detail">
+      <UniqueIdentifier>{1de08617-9f2b-4388-afef-7166a7bc2dc6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\cppcoro\net">
+      <UniqueIdentifier>{b5cc7780-c6bd-4ad1-b63f-fb3422e95105}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="C++23.cpp">
@@ -48,5 +57,232 @@
     <ClCompile Include="..\Cpp23\math2.ixx">
       <Filter>Source Files</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\async_auto_reset_event.hpp">
+      <Filter>Header Files\cppcoro</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\async_generator.hpp">
+      <Filter>Header Files\cppcoro</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\async_latch.hpp">
+      <Filter>Header Files\cppcoro</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\async_manual_reset_event.hpp">
+      <Filter>Header Files\cppcoro</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\async_mutex.hpp">
+      <Filter>Header Files\cppcoro</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\async_scope.hpp">
+      <Filter>Header Files\cppcoro</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\awaitable_traits.hpp">
+      <Filter>Header Files\cppcoro</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\broken_promise.hpp">
+      <Filter>Header Files\cppcoro</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\cancellation_registration.hpp">
+      <Filter>Header Files\cppcoro</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\cancellation_source.hpp">
+      <Filter>Header Files\cppcoro</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\cancellation_token.hpp">
+      <Filter>Header Files\cppcoro</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\config.hpp">
+      <Filter>Header Files\cppcoro</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\file.hpp">
+      <Filter>Header Files\cppcoro</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\file_buffering_mode.hpp">
+      <Filter>Header Files\cppcoro</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\file_open_mode.hpp">
+      <Filter>Header Files\cppcoro</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\file_read_operation.hpp">
+      <Filter>Header Files\cppcoro</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\file_share_mode.hpp">
+      <Filter>Header Files\cppcoro</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\file_write_operation.hpp">
+      <Filter>Header Files\cppcoro</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\fmap.hpp">
+      <Filter>Header Files\cppcoro</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\generator.hpp">
+      <Filter>Header Files\cppcoro</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\inline_scheduler.hpp">
+      <Filter>Header Files\cppcoro</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\io_service.hpp">
+      <Filter>Header Files\cppcoro</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\is_awaitable.hpp">
+      <Filter>Header Files\cppcoro</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\multi_producer_sequencer.hpp">
+      <Filter>Header Files\cppcoro</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\on_scope_exit.hpp">
+      <Filter>Header Files\cppcoro</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\operation_cancelled.hpp">
+      <Filter>Header Files\cppcoro</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\read_only_file.hpp">
+      <Filter>Header Files\cppcoro</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\read_write_file.hpp">
+      <Filter>Header Files\cppcoro</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\readable_file.hpp">
+      <Filter>Header Files\cppcoro</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\recursive_generator.hpp">
+      <Filter>Header Files\cppcoro</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\resume_on.hpp">
+      <Filter>Header Files\cppcoro</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\round_robin_scheduler.hpp">
+      <Filter>Header Files\cppcoro</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\schedule_on.hpp">
+      <Filter>Header Files\cppcoro</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\sequence_barrier.hpp">
+      <Filter>Header Files\cppcoro</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\sequence_range.hpp">
+      <Filter>Header Files\cppcoro</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\sequence_traits.hpp">
+      <Filter>Header Files\cppcoro</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\shared_task.hpp">
+      <Filter>Header Files\cppcoro</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\single_consumer_async_auto_reset_event.hpp">
+      <Filter>Header Files\cppcoro</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\single_consumer_event.hpp">
+      <Filter>Header Files\cppcoro</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\single_producer_sequencer.hpp">
+      <Filter>Header Files\cppcoro</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\static_thread_pool.hpp">
+      <Filter>Header Files\cppcoro</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\sync_wait.hpp">
+      <Filter>Header Files\cppcoro</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\task.hpp">
+      <Filter>Header Files\cppcoro</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\when_all.hpp">
+      <Filter>Header Files\cppcoro</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\when_all_ready.hpp">
+      <Filter>Header Files\cppcoro</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\writable_file.hpp">
+      <Filter>Header Files\cppcoro</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\write_only_file.hpp">
+      <Filter>Header Files\cppcoro</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\detail\any.hpp">
+      <Filter>Header Files\cppcoro\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\detail\get_awaiter.hpp">
+      <Filter>Header Files\cppcoro\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\detail\is_awaiter.hpp">
+      <Filter>Header Files\cppcoro\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\detail\lightweight_manual_reset_event.hpp">
+      <Filter>Header Files\cppcoro\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\detail\manual_lifetime.hpp">
+      <Filter>Header Files\cppcoro\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\detail\remove_rvalue_reference.hpp">
+      <Filter>Header Files\cppcoro\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\detail\sync_wait_task.hpp">
+      <Filter>Header Files\cppcoro\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\detail\unwrap_reference.hpp">
+      <Filter>Header Files\cppcoro\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\detail\void_value.hpp">
+      <Filter>Header Files\cppcoro\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\detail\when_all_counter.hpp">
+      <Filter>Header Files\cppcoro\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\detail\when_all_ready_awaitable.hpp">
+      <Filter>Header Files\cppcoro\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\detail\when_all_task.hpp">
+      <Filter>Header Files\cppcoro\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\detail\win32.hpp">
+      <Filter>Header Files\cppcoro\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\detail\win32_overlapped_operation.hpp">
+      <Filter>Header Files\cppcoro\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\net\ip_address.hpp">
+      <Filter>Header Files\cppcoro\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\net\ip_endpoint.hpp">
+      <Filter>Header Files\cppcoro\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\net\ipv4_address.hpp">
+      <Filter>Header Files\cppcoro\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\net\ipv4_endpoint.hpp">
+      <Filter>Header Files\cppcoro\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\net\ipv6_address.hpp">
+      <Filter>Header Files\cppcoro\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\net\ipv6_endpoint.hpp">
+      <Filter>Header Files\cppcoro\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\net\socket.hpp">
+      <Filter>Header Files\cppcoro\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\net\socket_accept_operation.hpp">
+      <Filter>Header Files\cppcoro\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\net\socket_connect_operation.hpp">
+      <Filter>Header Files\cppcoro\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\net\socket_disconnect_operation.hpp">
+      <Filter>Header Files\cppcoro\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\net\socket_recv_from_operation.hpp">
+      <Filter>Header Files\cppcoro\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\net\socket_recv_operation.hpp">
+      <Filter>Header Files\cppcoro\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\net\socket_send_operation.hpp">
+      <Filter>Header Files\cppcoro\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cppcoro\include\cppcoro\net\socket_send_to_operation.hpp">
+      <Filter>Header Files\cppcoro\net</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

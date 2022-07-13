@@ -1,0 +1,9 @@
+{
+    "Version": "1.1",
+    "Data": {
+        "Source": "c:\\git\\cpp20\\cpp23\\math1.ixx",
+        "ProvidedModule": "math",
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
