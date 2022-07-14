@@ -74,7 +74,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_SILENCE_EXPERIMENTAL_FILESYSTEM_DEPRECATION_WARNING;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpplatest</LanguageStandard>
       <AdditionalIncludeDirectories>C:\Git\cppcoro\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -92,7 +92,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_SILENCE_EXPERIMENTAL_FILESYSTEM_DEPRECATION_WARNING;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpplatest</LanguageStandard>
       <AdditionalIncludeDirectories>C:\Git\cppcoro\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -110,7 +110,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_SILENCE_EXPERIMENTAL_FILESYSTEM_DEPRECATION_WARNING;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpplatest</LanguageStandard>
       <AdditionalIncludeDirectories>C:\Git\cppcoro\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -128,7 +128,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_SILENCE_EXPERIMENTAL_FILESYSTEM_DEPRECATION_WARNING;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpplatest</LanguageStandard>
       <AdditionalIncludeDirectories>C:\Git\cppcoro\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -143,17 +143,103 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\Cpp23\client2.cpp" />
-    <ClCompile Include="..\Cpp23\cppcoroGenerator.cpp" />
-    <ClCompile Include="..\Cpp23\cppcoroMutex.cpp" />
-    <ClCompile Include="..\Cpp23\cppcoroProducerConsumer.cpp" />
-    <ClCompile Include="..\Cpp23\cppcoroTask.cpp" />
-    <ClCompile Include="..\Cpp23\cppcoroTask2.cpp" />
-    <ClCompile Include="..\Cpp23\cppcoroWhenAll.cpp" />
-    <ClCompile Include="..\Cpp23\cppcoroWhenAllOnThreadPool.cpp" />
-    <ClCompile Include="..\Cpp23\math1.ixx" />
-    <ClCompile Include="..\Cpp23\math2.ixx" />
-    <ClCompile Include="C++23.cpp" />
+    <ClCompile Include="..\..\cppcoro\lib\async_auto_reset_event.cpp" />
+    <ClCompile Include="..\..\cppcoro\lib\async_manual_reset_event.cpp" />
+    <ClCompile Include="..\..\cppcoro\lib\async_mutex.cpp" />
+    <ClCompile Include="..\..\cppcoro\lib\auto_reset_event.cpp" />
+    <ClCompile Include="..\..\cppcoro\lib\cancellation_registration.cpp" />
+    <ClCompile Include="..\..\cppcoro\lib\cancellation_source.cpp" />
+    <ClCompile Include="..\..\cppcoro\lib\cancellation_state.cpp" />
+    <ClCompile Include="..\..\cppcoro\lib\cancellation_token.cpp" />
+    <ClCompile Include="..\..\cppcoro\lib\file.cpp" />
+    <ClCompile Include="..\..\cppcoro\lib\file_read_operation.cpp" />
+    <ClCompile Include="..\..\cppcoro\lib\file_write_operation.cpp" />
+    <ClCompile Include="..\..\cppcoro\lib\io_service.cpp" />
+    <ClCompile Include="..\..\cppcoro\lib\ipv4_address.cpp" />
+    <ClCompile Include="..\..\cppcoro\lib\ipv4_endpoint.cpp" />
+    <ClCompile Include="..\..\cppcoro\lib\ipv6_address.cpp" />
+    <ClCompile Include="..\..\cppcoro\lib\ipv6_endpoint.cpp" />
+    <ClCompile Include="..\..\cppcoro\lib\ip_address.cpp" />
+    <ClCompile Include="..\..\cppcoro\lib\ip_endpoint.cpp" />
+    <ClCompile Include="..\..\cppcoro\lib\lightweight_manual_reset_event.cpp" />
+    <ClCompile Include="..\..\cppcoro\lib\readable_file.cpp" />
+    <ClCompile Include="..\..\cppcoro\lib\read_only_file.cpp" />
+    <ClCompile Include="..\..\cppcoro\lib\read_write_file.cpp" />
+    <ClCompile Include="..\..\cppcoro\lib\socket.cpp" />
+    <ClCompile Include="..\..\cppcoro\lib\socket_accept_operation.cpp" />
+    <ClCompile Include="..\..\cppcoro\lib\socket_connect_operation.cpp" />
+    <ClCompile Include="..\..\cppcoro\lib\socket_disconnect_operation.cpp" />
+    <ClCompile Include="..\..\cppcoro\lib\socket_helpers.cpp" />
+    <ClCompile Include="..\..\cppcoro\lib\socket_recv_from_operation.cpp" />
+    <ClCompile Include="..\..\cppcoro\lib\socket_recv_operation.cpp" />
+    <ClCompile Include="..\..\cppcoro\lib\socket_send_operation.cpp" />
+    <ClCompile Include="..\..\cppcoro\lib\socket_send_to_operation.cpp" />
+    <ClCompile Include="..\..\cppcoro\lib\spin_mutex.cpp" />
+    <ClCompile Include="..\..\cppcoro\lib\spin_wait.cpp" />
+    <ClCompile Include="..\..\cppcoro\lib\static_thread_pool.cpp" />
+    <ClCompile Include="..\..\cppcoro\lib\win32.cpp" />
+    <ClCompile Include="..\..\cppcoro\lib\writable_file.cpp" />
+    <ClCompile Include="..\..\cppcoro\lib\write_only_file.cpp" />
+    <ClCompile Include="..\Cpp23\client2.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Cpp23\cppcoroGenerator.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Cpp23\cppcoroMutex.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Cpp23\cppcoroProducerConsumer.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Cpp23\cppcoroTask.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Cpp23\cppcoroTask2.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Cpp23\cppcoroWhenAll.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Cpp23\cppcoroWhenAllOnThreadPool.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Cpp23\math1.ixx">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Cpp23\math2.ixx">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\cppcoro\include\cppcoro\async_auto_reset_event.hpp" />
@@ -231,6 +317,11 @@
     <ClInclude Include="..\..\cppcoro\include\cppcoro\when_all_ready.hpp" />
     <ClInclude Include="..\..\cppcoro\include\cppcoro\writable_file.hpp" />
     <ClInclude Include="..\..\cppcoro\include\cppcoro\write_only_file.hpp" />
+    <ClInclude Include="..\..\cppcoro\lib\auto_reset_event.hpp" />
+    <ClInclude Include="..\..\cppcoro\lib\cancellation_state.hpp" />
+    <ClInclude Include="..\..\cppcoro\lib\socket_helpers.hpp" />
+    <ClInclude Include="..\..\cppcoro\lib\spin_mutex.hpp" />
+    <ClInclude Include="..\..\cppcoro\lib\spin_wait.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
