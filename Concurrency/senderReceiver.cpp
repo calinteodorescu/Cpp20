@@ -29,8 +29,8 @@ class Event
 
     friend class Awaiter;
   
-    mutable std::atomic< void* > suspendedWaiter{ nullptr };
-    mutable std::atomic< bool  > notified       { false   };
+    mutable std::atomic< void* > m_suspendedWaiter{ nullptr };
+    mutable std::atomic< bool  > m_notified       { false   };
 };
 
 class Event::Awaiter 
@@ -58,37 +58,37 @@ class Event::Awaiter
 bool Event::Awaiter::await_ready( ) const
 {  
     // allow at most one waiter
-    if ( m_event.suspendedWaiter.load( ) != nullptr )
+    if ( m_event.m_suspendedWaiter.load( ) != nullptr )
     {
         throw std::runtime_error( "More than one waiter is not valid" );
     }
   
-    // event.notified == false; suspends the coroutine
-    // event.notified == true; the coroutine is executed like a normal function
-    return m_event.notified;
+    // event.m_notified == false; suspends the coroutine
+    // event.m_notified == true; the coroutine is executed like a normal function
+    return m_event.m_notified;
 }
 
 bool Event::Awaiter::await_suspend( std::experimental::coroutine_handle<> corHandle ) noexcept 
 {
     m_coroutineHandle = corHandle;
   
-    if ( m_event.notified )
+    if ( m_event.m_notified )
     {
         return false;
     }
   
     // store the waiter for later notification
-    m_event.suspendedWaiter.store( this );
+    m_event.m_suspendedWaiter.store( this );
 
     return true;
 }
 
 void Event::notify( ) noexcept 
 {
-    notified = true;
+    m_notified = true;
   
     // try to load the waiter
-    auto* waiter = static_cast< Awaiter* >( suspendedWaiter.load( ) );
+    auto* waiter = static_cast< Awaiter* >( m_suspendedWaiter.load( ) );
  
     // check if a waiter is available
     if ( waiter != nullptr ) 
@@ -109,15 +109,15 @@ struct Task
     {
         Task get_return_object( )
         { 
-            return {};
+            return { };
         }
         std::experimental::suspend_never initial_suspend( )
         { 
-            return {}; 
+            return { }; 
         }
         std::experimental::suspend_never final_suspend ( ) noexcept 
         { 
-            return {};
+            return { };
         }
         void return_void( )
         {
@@ -147,13 +147,12 @@ int main( )
     std::cout << '\n';
     std::cout << "Notification before waiting" << '\n';
     {
-        Event event1{};
-
+        Event event1{ };
         auto senderThread1   = std::thread( [ & event1 ]
                                             {
                                                 event1.notify( );
                                             }
-                                          );  // Notification
+                                          );
         auto receiverThread1 = std::thread( receiver,
                                             std::ref( event1 )
                                           );
@@ -165,8 +164,7 @@ int main( )
     std::cout << '\n';
     std::cout << "Notification after 2 seconds waiting" << '\n';
     {
-        Event event2{};
-
+        Event event2{ };
         auto receiverThread2 = std::thread( receiver,
                                             std::ref( event2 )
                                           );
@@ -174,7 +172,7 @@ int main( )
                                             {
                                                 std::this_thread::sleep_for( 2s );
 
-                                                event2.notify( ); // Notification
+                                                event2.notify( );
                                             }
                                           );    
         receiverThread2.join( );
