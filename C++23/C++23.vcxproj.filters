@@ -39,38 +39,14 @@
     <Filter Include="%2a Libs\cppcoro\%2a%2a Source Files">
       <UniqueIdentifier>{321a2797-cdd3-4f5e-b203-712b650c2e9d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="%2a%2a Source Files\Concurrency">
+      <UniqueIdentifier>{e0bcdafc-058c-4fcb-a6cb-bf2a5dc6ba01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="%2a%2a Source Files\Coroutines">
+      <UniqueIdentifier>{65d1069c-4bcd-4091-80f0-f2902c7ce5f1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\Cpp23\client2.cpp">
-      <Filter>%2a%2a Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Cpp23\cppcoroGenerator.cpp">
-      <Filter>%2a%2a Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Cpp23\cppcoroMutex.cpp">
-      <Filter>%2a%2a Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Cpp23\cppcoroProducerConsumer.cpp">
-      <Filter>%2a%2a Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Cpp23\cppcoroTask.cpp">
-      <Filter>%2a%2a Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Cpp23\cppcoroTask2.cpp">
-      <Filter>%2a%2a Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Cpp23\cppcoroWhenAll.cpp">
-      <Filter>%2a%2a Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Cpp23\cppcoroWhenAllOnThreadPool.cpp">
-      <Filter>%2a%2a Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Cpp23\math1.ixx">
-      <Filter>%2a%2a Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Cpp23\math2.ixx">
-      <Filter>%2a%2a Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\cppcoro\lib\async_auto_reset_event.cpp">
       <Filter>%2a Libs\cppcoro\%2a%2a Source Files</Filter>
     </ClCompile>
@@ -181,6 +157,114 @@
     </ClCompile>
     <ClCompile Include="..\..\cppcoro\lib\write_only_file.cpp">
       <Filter>%2a Libs\cppcoro\%2a%2a Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Concurrency\atomicRef.cpp">
+      <Filter>%2a%2a Source Files\Concurrency</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Concurrency\atomicRefCopy.cpp">
+      <Filter>%2a%2a Source Files\Concurrency</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Concurrency\atomicReference.cpp">
+      <Filter>%2a%2a Source Files\Concurrency</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Concurrency\bossWorkers.cpp">
+      <Filter>%2a%2a Source Files\Concurrency</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Concurrency\conditionVariableAny.cpp">
+      <Filter>%2a%2a Source Files\Concurrency</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Concurrency\coutSynchronized.cpp">
+      <Filter>%2a%2a Source Files\Concurrency</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Concurrency\coutUnsynchronized.cpp">
+      <Filter>%2a%2a Source Files\Concurrency</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Concurrency\eagerFuture.cpp">
+      <Filter>%2a%2a Source Files\Concurrency</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Concurrency\fullTimePartTimeWorkers.cpp">
+      <Filter>%2a%2a Source Files\Concurrency</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Concurrency\greedyGenerator.cpp">
+      <Filter>%2a%2a Source Files\Concurrency</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Concurrency\infiniteDataStream.cpp">
+      <Filter>%2a%2a Source Files\Concurrency</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Concurrency\interruptJthread.cpp">
+      <Filter>%2a%2a Source Files\Concurrency</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Concurrency\invokeCallback.cpp">
+      <Filter>%2a%2a Source Files\Concurrency</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Concurrency\jthreadJoinable.cpp">
+      <Filter>%2a%2a Source Files\Concurrency</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Concurrency\lazyGenerator.cpp">
+      <Filter>%2a%2a Source Files\Concurrency</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Concurrency\senderReceiver.cpp">
+      <Filter>%2a%2a Source Files\Concurrency</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Concurrency\sequenceOutput.cpp">
+      <Filter>%2a%2a Source Files\Concurrency</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Concurrency\startJob.cpp">
+      <Filter>%2a%2a Source Files\Concurrency</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Concurrency\synchronizedOutput.cpp">
+      <Filter>%2a%2a Source Files\Concurrency</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Concurrency\threadJoinable.cpp">
+      <Filter>%2a%2a Source Files\Concurrency</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Concurrency\threadSynchronizationAtomicBool.cpp">
+      <Filter>%2a%2a Source Files\Concurrency</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Concurrency\threadSynchronizationAtomicFlag.cpp">
+      <Filter>%2a%2a Source Files\Concurrency</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Concurrency\threadSynchronizationConditionVariables.cpp">
+      <Filter>%2a%2a Source Files\Concurrency</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Concurrency\threadSynchronizationPromiseFuture.cpp">
+      <Filter>%2a%2a Source Files\Concurrency</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Concurrency\threadSynchronizationSemaphore.cpp">
+      <Filter>%2a%2a Source Files\Concurrency</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Concurrency\workers.cpp">
+      <Filter>%2a%2a Source Files\Concurrency</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Cpp23\client2.cpp">
+      <Filter>%2a%2a Source Files\Coroutines</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Cpp23\cppcoroGenerator.cpp">
+      <Filter>%2a%2a Source Files\Coroutines</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Cpp23\cppcoroMutex.cpp">
+      <Filter>%2a%2a Source Files\Coroutines</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Cpp23\cppcoroProducerConsumer.cpp">
+      <Filter>%2a%2a Source Files\Coroutines</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Cpp23\cppcoroTask.cpp">
+      <Filter>%2a%2a Source Files\Coroutines</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Cpp23\cppcoroTask2.cpp">
+      <Filter>%2a%2a Source Files\Coroutines</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Cpp23\cppcoroWhenAll.cpp">
+      <Filter>%2a%2a Source Files\Coroutines</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Cpp23\cppcoroWhenAllOnThreadPool.cpp">
+      <Filter>%2a%2a Source Files\Coroutines</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Cpp23\math1.ixx">
+      <Filter>%2a%2a Source Files\Coroutines</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Cpp23\math2.ixx">
+      <Filter>%2a%2a Source Files\Coroutines</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
