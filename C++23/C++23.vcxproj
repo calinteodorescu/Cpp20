@@ -78,6 +78,8 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpplatest</LanguageStandard>
       <AdditionalIncludeDirectories>C:\Git\cppcoro\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <EnableModules>true</EnableModules>
+      <AdditionalOptions>/await</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -94,6 +96,8 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpplatest</LanguageStandard>
       <AdditionalIncludeDirectories>C:\Git\cppcoro\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <EnableModules>true</EnableModules>
+      <AdditionalOptions>/await</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -110,6 +114,8 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpplatest</LanguageStandard>
       <AdditionalIncludeDirectories>C:\Git\cppcoro\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <EnableModules>true</EnableModules>
+      <AdditionalOptions>/await</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -126,6 +132,8 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpplatest</LanguageStandard>
       <AdditionalIncludeDirectories>C:\Git\cppcoro\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <EnableModules>true</EnableModules>
+      <AdditionalOptions>/await</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
