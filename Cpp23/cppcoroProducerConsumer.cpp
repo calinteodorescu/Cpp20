@@ -12,37 +12,36 @@
 
 cppcoro::single_consumer_event event;  
 
-cppcoro::task<> consumer() {
-    
-    auto start = std::chrono::high_resolution_clock::now();
+cppcoro::task< > consumer( )
+{    
+    auto start = std::chrono::high_resolution_clock::now( );
     
     co_await event;  // suspended until some thread calls event.set()
     
-    auto end = std::chrono::high_resolution_clock::now();
+    auto end = std::chrono::high_resolution_clock::now( );
+
     std::chrono::duration<double> elapsed = end - start;
-    std::cout << "Consumer waited " << elapsed.count() << " seconds." << '\n';
+    std::cout << "Consumer waited " << elapsed.count( ) << " seconds." << '\n';
   
     co_return;
 }
 
-void producer() {
-
+void producer( ) 
+{
     using namespace std::chrono_literals;
-    std::this_thread::sleep_for(2s);
+    std::this_thread::sleep_for( 2s );
     
-    event.set();  // resumes the consumer  
-    
+    event.set( );  // resumes the consumer      
 }
 
-int main() {
-    
+int main() 
+{    
     std::cout << '\n';
     
-    auto con = std::async([]{ cppcoro::sync_wait(consumer()); });  
-    auto prod = std::async(producer);                             
+    auto con  = std::async([]{ cppcoro::sync_wait(consumer()); });  
+    auto prod = std::async( producer );                             
     
     con.get(), prod.get();
     
-    std::cout << '\n';
-    
+    std::cout << '\n';    
 }
