@@ -42,7 +42,7 @@ class Event::Awaiter
     }
 
     bool await_ready  ( ) const;
-    bool await_suspend( std::experimental::coroutine_handle<> corHandle ) noexcept;
+    bool await_suspend( std::experimental::coroutine_handle<> coroutineHandle ) noexcept;
     void await_resume ( ) noexcept
     {
     }
@@ -65,12 +65,13 @@ bool Event::Awaiter::await_ready( ) const
   
     // event.m_notified == false; suspends the coroutine
     // event.m_notified == true; the coroutine is executed like a normal function
+
     return m_event.m_notified;
 }
 
-bool Event::Awaiter::await_suspend( std::experimental::coroutine_handle<> corHandle ) noexcept 
+bool Event::Awaiter::await_suspend( std::experimental::coroutine_handle<> coroutineHandle ) noexcept 
 {
-    m_coroutineHandle = corHandle;
+    m_coroutineHandle = coroutineHandle;
   
     if ( m_event.m_notified )
     {
