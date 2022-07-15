@@ -144,6 +144,11 @@ using namespace std::chrono_literals;
 
 int main( )
 {    
+    std::string_view sview;
+    sview = { "Calin" };
+
+    std::string s = sview.data( );
+
     std::cout << '\n';
     std::cout << "Notification before waiting" << '\n';
     {
