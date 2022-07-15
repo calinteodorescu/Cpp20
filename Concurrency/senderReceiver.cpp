@@ -82,6 +82,11 @@ class Event::Awaiter
     std::experimental::coroutine_handle<> m_coroutineHandle;
 };
 
+Event::Awaiter Event::operator co_await( ) const noexcept 
+{
+    return Awaiter{ * this };
+}
+
 bool Event::Awaiter::await_ready( ) const
 {  
     // allow at most one waiter
@@ -130,11 +135,6 @@ void Event::notify( ) noexcept
     }
 }
 
-Event::Awaiter Event::operator co_await( ) const noexcept 
-{
-    return Awaiter{ * this };
-}
-
 Task receiver( Event& event )
 { 
     auto start = std::chrono::high_resolution_clock::now( );
@@ -151,46 +151,41 @@ using namespace std::chrono_literals;
 
 int main( )
 {    
-    std::string_view sview;
-    sview = { "Calin" };
-
-    std::string s = sview.data( );
-
     {
         std::cout << '\n';
         std::cout << "Notification before waiting" << '\n';
 
-        Event event1{ };
-        auto senderThread1   = std::thread( [ & event1 ]
-                                            {
-                                                event1.notify( );
-                                            }
-                                          );
-        auto receiverThread1 = std::thread( receiver,
-                                            std::ref( event1 )
-                                          );
+        Event event{ };
+        auto senderThread   = std::thread( [ & event ]
+                                           {
+                                               event.notify( );
+                                           }
+                                         );
+        auto receiverThread = std::thread( receiver,
+                                           std::ref( event )
+                                         );
     
-        receiverThread1.join( );
-        senderThread1.  join( );
+        receiverThread.join( );
+        senderThread.  join( );
     }
     
     {
         std::cout << '\n';
         std::cout << "Notification after 2 seconds waiting" << '\n';
 
-        Event event2{ };
-        auto receiverThread2 = std::thread( receiver,
-                                            std::ref( event2 )
-                                          );
-        auto senderThread2   = std::thread( [ & event2 ]
-                                            {
-                                                std::this_thread::sleep_for( 2s );
+        Event event{ };
+        auto receiverThread = std::thread( receiver,
+                                           std::ref( event )
+                                         );
+        auto senderThread   = std::thread( [ & event ]
+                                           {
+                                               std::this_thread::sleep_for( 2s );
 
-                                                event2.notify( );
-                                            }
-                                          );    
-        receiverThread2.join( );
-        senderThread2.  join( );
+                                               event.notify( );
+                                           }
+                                         );    
+        receiverThread.join( );
+        senderThread.  join( );
     }
      
     std::cout << '\n';    
