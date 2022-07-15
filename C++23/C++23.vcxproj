@@ -72,20 +72,20 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IntDir>C:\Temp\Garbage\$(SolutionName)\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
-    <OutDir>C:\Temp\Garbage\$(SolutionName)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>C:\Temp\Garbage\Build\$(SolutionName)\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <OutDir>C:\Temp\Garbage\Build\$(SolutionName)\$(Platform)\$(Configuration)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IntDir>C:\Temp\Garbage\$(SolutionName)\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
-    <OutDir>C:\Temp\Garbage\$(SolutionName)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>C:\Temp\Garbage\Build\$(SolutionName)\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <OutDir>C:\Temp\Garbage\Build\$(SolutionName)\$(Platform)\$(Configuration)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IntDir>C:\Temp\Garbage\$(SolutionName)\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
-    <OutDir>C:\Temp\Garbage\$(SolutionName)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>C:\Temp\Garbage\Build\$(SolutionName)\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <OutDir>C:\Temp\Garbage\Build\$(SolutionName)\$(Platform)\$(Configuration)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IntDir>C:\Temp\Garbage\$(SolutionName)\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
-    <OutDir>C:\Temp\Garbage\$(SolutionName)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>C:\Temp\Garbage\Build\$(SolutionName)\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <OutDir>C:\Temp\Garbage\Build\$(SolutionName)\$(Platform)\$(Configuration)\</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

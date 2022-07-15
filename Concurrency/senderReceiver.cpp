@@ -9,6 +9,35 @@
 #include <atomic>
 #include <thread>
 
+struct Task
+{
+    struct promise_type
+    {
+        Task get_return_object( )
+        { 
+            return { };
+        }
+
+        std::experimental::suspend_never initial_suspend( )
+        { 
+            return { };
+        }
+
+        std::experimental::suspend_never final_suspend ( ) noexcept 
+        { 
+            return { };
+        }
+
+        void return_void( )
+        {
+        }
+
+        void unhandled_exception( )
+        {
+        }
+    };
+};
+
 class Event 
 {
  public:
@@ -36,16 +65,14 @@ class Event
 class Event::Awaiter 
 {
  public:
-    Awaiter( const Event& eve )
-    :   m_event( eve )
+    Awaiter( const Event& event )
+    :   m_event( event )
     {
     }
 
     bool await_ready  ( ) const;
     bool await_suspend( std::experimental::coroutine_handle<> coroutineHandle ) noexcept;
-    void await_resume ( ) noexcept
-    {
-    }
+    void await_resume ( ) noexcept;
 
  private:
 
@@ -84,6 +111,10 @@ bool Event::Awaiter::await_suspend( std::experimental::coroutine_handle<> corout
     return true;
 }
 
+void Event::Awaiter::await_resume ( ) noexcept
+{
+}
+
 void Event::notify( ) noexcept 
 {
     m_notified = true;
@@ -103,31 +134,6 @@ Event::Awaiter Event::operator co_await( ) const noexcept
 {
     return Awaiter{ * this };
 }
-
-struct Task
-{
-    struct promise_type
-    {
-        Task get_return_object( )
-        { 
-            return { };
-        }
-        std::experimental::suspend_never initial_suspend( )
-        { 
-            return { }; 
-        }
-        std::experimental::suspend_never final_suspend ( ) noexcept 
-        { 
-            return { };
-        }
-        void return_void( )
-        {
-        }
-        void unhandled_exception( )
-        {
-        }
-    };
-};
 
 Task receiver( Event& event )
 { 
@@ -150,9 +156,10 @@ int main( )
 
     std::string s = sview.data( );
 
-    std::cout << '\n';
-    std::cout << "Notification before waiting" << '\n';
     {
+        std::cout << '\n';
+        std::cout << "Notification before waiting" << '\n';
+
         Event event1{ };
         auto senderThread1   = std::thread( [ & event1 ]
                                             {
@@ -167,9 +174,10 @@ int main( )
         senderThread1.  join( );
     }
     
-    std::cout << '\n';
-    std::cout << "Notification after 2 seconds waiting" << '\n';
     {
+        std::cout << '\n';
+        std::cout << "Notification after 2 seconds waiting" << '\n';
+
         Event event2{ };
         auto receiverThread2 = std::thread( receiver,
                                             std::ref( event2 )
