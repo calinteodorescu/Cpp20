@@ -9,9 +9,8 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    <Filter Include="Module Files">
+      <UniqueIdentifier>{8b70eaf3-d9fa-40df-8063-cd2fc5d2dd01}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -566,6 +565,42 @@
     </ClCompile>
     <ClCompile Include="library\weekdaysOfBirthdays.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CoreLanguage\math.ixx">
+      <Filter>Module Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CoreLanguage\math1.ixx">
+      <Filter>Module Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CoreLanguage\math2.ixx">
+      <Filter>Module Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CoreLanguage\mathInterfaceUnit.ixx">
+      <Filter>Module Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CoreLanguage\mathModule.ixx">
+      <Filter>Module Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CoreLanguage\mathModule1.ixx">
+      <Filter>Module Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CoreLanguage\mathModule2.ixx">
+      <Filter>Module Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CoreLanguage\mathModuleTempate1.ixx">
+      <Filter>Module Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CoreLanguage\mathModuleTemplate.ixx">
+      <Filter>Module Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CoreLanguage\mathPartition.ixx">
+      <Filter>Module Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CoreLanguage\mathPartition1.ixx">
+      <Filter>Module Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CoreLanguage\mathPartition2.ixx">
+      <Filter>Module Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

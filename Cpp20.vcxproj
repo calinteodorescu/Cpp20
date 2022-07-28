@@ -89,6 +89,9 @@
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <EnableModules>true</EnableModules>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <AdditionalIncludeDirectories>../cppcoro/include</AdditionalIncludeDirectories>
+      <AdditionalOptions>/await:strict %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <TargetMachine>MachineX86</TargetMachine>
@@ -103,6 +106,9 @@
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <EnableModules>true</EnableModules>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <AdditionalIncludeDirectories>../cppcoro/include</AdditionalIncludeDirectories>
+      <AdditionalOptions>/await:strict %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <TargetMachine>MachineX86</TargetMachine>
@@ -115,11 +121,17 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <EnableModules>true</EnableModules>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <AdditionalIncludeDirectories>../cppcoro/include</AdditionalIncludeDirectories>
+      <AdditionalOptions>/await:strict %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <EnableModules>true</EnableModules>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <AdditionalIncludeDirectories>../cppcoro/include</AdditionalIncludeDirectories>
+      <AdditionalOptions>/await:strict %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -203,9 +215,21 @@
     <ClCompile Include="corelanguage\mainSIOF2.cpp" />
     <ClCompile Include="corelanguage\mainSIOF3.cpp" />
     <ClCompile Include="corelanguage\math.cpp" />
+    <ClCompile Include="CoreLanguage\math.ixx" />
+    <ClCompile Include="CoreLanguage\math1.ixx" />
+    <ClCompile Include="CoreLanguage\math2.ixx" />
     <ClCompile Include="corelanguage\mathImplementationUnit.cpp" />
+    <ClCompile Include="CoreLanguage\mathInterfaceUnit.ixx" />
+    <ClCompile Include="CoreLanguage\mathModule.ixx" />
+    <ClCompile Include="CoreLanguage\mathModule1.ixx" />
+    <ClCompile Include="CoreLanguage\mathModule2.ixx" />
     <ClCompile Include="corelanguage\mathModuleClient.cpp" />
     <ClCompile Include="corelanguage\mathModuleClient1.cpp" />
+    <ClCompile Include="CoreLanguage\mathModuleTempate1.ixx" />
+    <ClCompile Include="CoreLanguage\mathModuleTemplate.ixx" />
+    <ClCompile Include="CoreLanguage\mathPartition.ixx" />
+    <ClCompile Include="CoreLanguage\mathPartition1.ixx" />
+    <ClCompile Include="CoreLanguage\mathPartition2.ixx" />
     <ClCompile Include="corelanguage\nestedRequirements.cpp" />
     <ClCompile Include="corelanguage\nodiscard.cpp" />
     <ClCompile Include="corelanguage\nodiscardString.cpp" />
