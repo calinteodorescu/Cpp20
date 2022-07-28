@@ -263,7 +263,12 @@
     <ClCompile Include="corelanguage\virtualConstexpr.cpp" />
     <ClCompile Include="corelanguage\withoutNodiscard.cpp" />
     <ClCompile Include="corelanguage\world.cpp" />
-    <ClCompile Include="cpp23\client2.cpp" />
+    <ClCompile Include="cpp23\client2.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="cpp23\cppcoroGenerator.cpp" />
     <ClCompile Include="cpp23\cppcoroMutex.cpp" />
     <ClCompile Include="cpp23\cppcoroProducerConsumer.cpp" />
