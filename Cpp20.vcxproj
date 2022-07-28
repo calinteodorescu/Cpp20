@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <ProjectGuid>{7FA8839B-CF03-4E5D-B232-82DC034FC8B9}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="casestudies\coroutineGetElements.cpp" />
+    <ClCompile Include="casestudies\eagerFutureWithComments.cpp" />
+    <ClCompile Include="casestudies\infiniteDataStreamComments.cpp" />
+    <ClCompile Include="casestudies\lazyFuture.cpp" />
+    <ClCompile Include="casestudies\lazyFutureOnOtherThread.cpp" />
+    <ClCompile Include="casestudies\pingPongAtomicBool.cpp" />
+    <ClCompile Include="casestudies\pingPongAtomicFlag.cpp" />
+    <ClCompile Include="casestudies\pingPongAtomicFlags.cpp" />
+    <ClCompile Include="casestudies\pingPongConditionVariable.cpp" />
+    <ClCompile Include="casestudies\pingPongSemaphore.cpp" />
+    <ClCompile Include="casestudies\startJobWithAutomaticResumption.cpp" />
+    <ClCompile Include="casestudies\startJobWithAutomaticResumptionOnThread.cpp" />
+    <ClCompile Include="casestudies\startJobWithComments.cpp" />
+    <ClCompile Include="concurrency\atomicRef.cpp" />
+    <ClCompile Include="concurrency\atomicRefCopy.cpp" />
+    <ClCompile Include="concurrency\atomicReference.cpp" />
+    <ClCompile Include="concurrency\bossWorkers.cpp" />
+    <ClCompile Include="concurrency\conditionVariableAny.cpp" />
+    <ClCompile Include="concurrency\coutSynchronized.cpp" />
+    <ClCompile Include="concurrency\coutUnsynchronized.cpp" />
+    <ClCompile Include="concurrency\eagerFuture.cpp" />
+    <ClCompile Include="concurrency\fullTimePartTimeWorkers.cpp" />
+    <ClCompile Include="concurrency\greedyGenerator.cpp" />
+    <ClCompile Include="concurrency\infiniteDataStream.cpp" />
+    <ClCompile Include="concurrency\interruptJthread.cpp" />
+    <ClCompile Include="concurrency\invokeCallback.cpp" />
+    <ClCompile Include="concurrency\jthreadJoinable.cpp" />
+    <ClCompile Include="concurrency\lazyGenerator.cpp" />
+    <ClCompile Include="concurrency\senderReceiver.cpp" />
+    <ClCompile Include="concurrency\sequenceOutput.cpp" />
+    <ClCompile Include="concurrency\startJob.cpp" />
+    <ClCompile Include="concurrency\synchronizedOutput.cpp" />
+    <ClCompile Include="concurrency\threadJoinable.cpp" />
+    <ClCompile Include="concurrency\threadSynchronizationAtomicBool.cpp" />
+    <ClCompile Include="concurrency\threadSynchronizationAtomicFlag.cpp" />
+    <ClCompile Include="concurrency\threadSynchronizationConditionVariables.cpp" />
+    <ClCompile Include="concurrency\threadSynchronizationPromiseFuture.cpp" />
+    <ClCompile Include="concurrency\threadSynchronizationSemaphore.cpp" />
+    <ClCompile Include="concurrency\workers.cpp" />
+    <ClCompile Include="corelanguage\abbreviatedFunctionTemplates.cpp" />
+    <ClCompile Include="corelanguage\aggregateInitialization.cpp" />
+    <ClCompile Include="corelanguage\allAnyNone.cpp" />
+    <ClCompile Include="corelanguage\bitField.cpp" />
+    <ClCompile Include="corelanguage\char8Str.cpp" />
+    <ClCompile Include="corelanguage\client.cpp" />
+    <ClCompile Include="corelanguage\client1.cpp" />
+    <ClCompile Include="corelanguage\client2.cpp" />
+    <ClCompile Include="corelanguage\client3.cpp" />
+    <ClCompile Include="corelanguage\clientTemplate.cpp" />
+    <ClCompile Include="corelanguage\comparisonOperator.cpp" />
+    <ClCompile Include="corelanguage\compileTimePredicate.cpp" />
+    <ClCompile Include="corelanguage\conceptClassTemplate.cpp" />
+    <ClCompile Include="corelanguage\conceptMemberFunction.cpp" />
+    <ClCompile Include="corelanguage\conceptsDefinitionEqual.cpp" />
+    <ClCompile Include="corelanguage\conceptsDefinitionOrdering.cpp" />
+    <ClCompile Include="corelanguage\conceptsIntegralVariations.cpp" />
+    <ClCompile Include="corelanguage\conceptsOverloading.cpp" />
+    <ClCompile Include="corelanguage\conceptsOverloadingFunctionTemplates.cpp" />
+    <ClCompile Include="corelanguage\conceptsSpecialization.cpp" />
+    <ClCompile Include="corelanguage\conditionallyConstructor.cpp" />
+    <ClCompile Include="corelanguage\consteval.cpp" />
+    <ClCompile Include="corelanguage\constevalSqr.cpp" />
+    <ClCompile Include="corelanguage\constexprConstinit.cpp" />
+    <ClCompile Include="corelanguage\constinitSqr.cpp" />
+    <ClCompile Include="corelanguage\designatedInitializer.cpp" />
+    <ClCompile Include="corelanguage\designatedInitializerNarrowingConversion.cpp" />
+    <ClCompile Include="corelanguage\designatedInitializersDefault.cpp" />
+    <ClCompile Include="corelanguage\enumUsing.cpp" />
+    <ClCompile Include="corelanguage\genericLambdaTemplate.cpp" />
+    <ClCompile Include="corelanguage\hello.cpp" />
+    <ClCompile Include="corelanguage\helloWorld.cpp" />
+    <ClCompile Include="corelanguage\helloWorld2.cpp" />
+    <ClCompile Include="corelanguage\implicitExplicitGenericConstructor.cpp" />
+    <ClCompile Include="corelanguage\lambdaCaptureThis.cpp" />
+    <ClCompile Include="corelanguage\lambdaUnevaluatedContext.cpp" />
+    <ClCompile Include="corelanguage\main.cpp" />
+    <ClCompile Include="corelanguage\mainSIOF1.cpp" />
+    <ClCompile Include="corelanguage\mainSIOF2.cpp" />
+    <ClCompile Include="corelanguage\mainSIOF3.cpp" />
+    <ClCompile Include="corelanguage\math.cpp" />
+    <ClCompile Include="corelanguage\mathImplementationUnit.cpp" />
+    <ClCompile Include="corelanguage\mathModuleClient.cpp" />
+    <ClCompile Include="corelanguage\mathModuleClient1.cpp" />
+    <ClCompile Include="corelanguage\nestedRequirements.cpp" />
+    <ClCompile Include="corelanguage\nodiscard.cpp" />
+    <ClCompile Include="corelanguage\nodiscardString.cpp" />
+    <ClCompile Include="corelanguage\nonTypeTemplateParameter.cpp" />
+    <ClCompile Include="corelanguage\nonTypeTemplateParameterString.cpp" />
+    <ClCompile Include="corelanguage\placeholders.cpp" />
+    <ClCompile Include="corelanguage\rangeBasedForLoopInitializer.cpp" />
+    <ClCompile Include="corelanguage\regularSemiRegular.cpp" />
+    <ClCompile Include="corelanguage\requiresClause.cpp" />
+    <ClCompile Include="corelanguage\rewritingExpressions.cpp" />
+    <ClCompile Include="corelanguage\signedUnsignedIntegrals.cpp" />
+    <ClCompile Include="corelanguage\sourceSIOF1.cpp" />
+    <ClCompile Include="corelanguage\sourceSIOF2.cpp" />
+    <ClCompile Include="corelanguage\sourceSIOF3.cpp" />
+    <ClCompile Include="corelanguage\spaceship.cpp" />
+    <ClCompile Include="corelanguage\spaceshipPointer.cpp" />
+    <ClCompile Include="corelanguage\strongWeakPartial.cpp" />
+    <ClCompile Include="corelanguage\sumMain.cpp" />
+    <ClCompile Include="corelanguage\templateLambda.cpp" />
+    <ClCompile Include="corelanguage\templateLambdaVector.cpp" />
+    <ClCompile Include="corelanguage\test.cpp" />
+    <ClCompile Include="corelanguage\threeWayComparison.cpp" />
+    <ClCompile Include="corelanguage\threeWayComparisonAtCompileTime.cpp" />
+    <ClCompile Include="corelanguage\threeWayComparisonForInt.cpp" />
+    <ClCompile Include="corelanguage\tooGeneric.cpp" />
+    <ClCompile Include="corelanguage\tooSpecific.cpp" />
+    <ClCompile Include="corelanguage\typeRequirements.cpp" />
+    <ClCompile Include="corelanguage\unevaluatedContext.cpp" />
+    <ClCompile Include="corelanguage\uniqueAddress.cpp" />
+    <ClCompile Include="corelanguage\userDefinedAutoGeneratedOperators.cpp" />
+    <ClCompile Include="corelanguage\virtualConstexpr.cpp" />
+    <ClCompile Include="corelanguage\withoutNodiscard.cpp" />
+    <ClCompile Include="corelanguage\world.cpp" />
+    <ClCompile Include="cpp23\client2.cpp" />
+    <ClCompile Include="cpp23\cppcoroGenerator.cpp" />
+    <ClCompile Include="cpp23\cppcoroMutex.cpp" />
+    <ClCompile Include="cpp23\cppcoroProducerConsumer.cpp" />
+    <ClCompile Include="cpp23\cppcoroTask.cpp" />
+    <ClCompile Include="cpp23\cppcoroTask2.cpp" />
+    <ClCompile Include="cpp23\cppcoroWhenAll.cpp" />
+    <ClCompile Include="cpp23\cppcoroWhenAllOnThreadPool.cpp" />
+    <ClCompile Include="featuretesting\featureTest.cpp" />
+    <ClCompile Include="library\bindFront.cpp" />
+    <ClCompile Include="library\bit.cpp" />
+    <ClCompile Include="library\bitFloorCeil.cpp" />
+    <ClCompile Include="library\checkExistence.cpp" />
+    <ClCompile Include="library\classicalComparison.cpp" />
+    <ClCompile Include="library\constantEvaluated.cpp" />
+    <ClCompile Include="library\constexprVector.cpp" />
+    <ClCompile Include="library\constRangeModifiableElements.cpp" />
+    <ClCompile Include="library\containerView.cpp" />
+    <ClCompile Include="library\containtsElement.cpp" />
+    <ClCompile Include="library\createCalendar.cpp" />
+    <ClCompile Include="library\createSpan.cpp" />
+    <ClCompile Include="library\cuteSyntax.cpp" />
+    <ClCompile Include="library\eraseCpp20.cpp" />
+    <ClCompile Include="library\eraseRemoveElements.cpp" />
+    <ClCompile Include="library\filterRanges.cpp" />
+    <ClCompile Include="library\format.cpp" />
+    <ClCompile Include="library\formatAlternate.cpp" />
+    <ClCompile Include="library\formatArgumentID.cpp" />
+    <ClCompile Include="library\formatFillAlign.cpp" />
+    <ClCompile Include="library\formatHash.cpp" />
+    <ClCompile Include="library\formatSign.cpp" />
+    <ClCompile Include="library\formatType.cpp" />
+    <ClCompile Include="library\formatVector.cpp" />
+    <ClCompile Include="library\formatVectorLinebreak.cpp" />
+    <ClCompile Include="library\formatWidthPrecision.cpp" />
+    <ClCompile Include="library\getEndianness.cpp" />
+    <ClCompile Include="library\leapYear.cpp" />
+    <ClCompile Include="library\listComprehensionRanges.cpp" />
+    <ClCompile Include="library\localTime.cpp" />
+    <ClCompile Include="library\mapRanges.cpp" />
+    <ClCompile Include="library\mathematicConstants.cpp" />
+    <ClCompile Include="library\midpointLerp.cpp" />
+    <ClCompile Include="library\onlineClass.cpp" />
+    <ClCompile Include="library\ordinalDate.cpp" />
+    <ClCompile Include="library\printSpan.cpp" />
+    <ClCompile Include="library\queryCalendarDates.cpp" />
+    <ClCompile Include="library\rangeProjection.cpp" />
+    <ClCompile Include="library\rangesComposition.cpp" />
+    <ClCompile Include="library\rangesEntireContainer.cpp" />
+    <ClCompile Include="library\rangesFilterTransform.cpp" />
+    <ClCompile Include="library\rangesIota.cpp" />
+    <ClCompile Include="library\rangesLazy.cpp" />
+    <ClCompile Include="library\removeElements.cpp" />
+    <ClCompile Include="library\safeComparison.cpp" />
+    <ClCompile Include="library\safeComparison2.cpp" />
+    <ClCompile Include="library\sortClassic.cpp" />
+    <ClCompile Include="library\sortRanges.cpp" />
+    <ClCompile Include="library\sourceLocation.cpp" />
+    <ClCompile Include="library\spanTransform.cpp" />
+    <ClCompile Include="library\staticDynamicExtentSpan.cpp" />
+    <ClCompile Include="library\stringStartsWithEndsWith.cpp" />
+    <ClCompile Include="library\subspan.cpp" />
+    <ClCompile Include="library\sysDays.cpp" />
+    <ClCompile Include="library\timeOfDay.cpp" />
+    <ClCompile Include="library\toArray.cpp" />
+    <ClCompile Include="library\unsafeComparison.cpp" />
+    <ClCompile Include="library\unsafeComparison2.cpp" />
+    <ClCompile Include="library\weekdaysOfBirthdays.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="corelanguage\header.h" />
+    <ClInclude Include="corelanguage\header2.h" />
+    <ClInclude Include="corelanguage\hello.h" />
+    <ClInclude Include="corelanguage\templateSum.h" />
+    <ClInclude Include="corelanguage\world.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
